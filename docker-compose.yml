@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: client-server
+    container_name: my-client-server
+    command: npm start
+    volumes:
+      - ./client/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+    node_modules:
+    web-root:
+      driver: local
