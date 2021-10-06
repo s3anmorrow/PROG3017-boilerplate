@@ -1,6 +1,6 @@
 # Boilerplate for PROG3017 Full Stack Programming
 
-This project folder currently only contains the React client side. Other parts of the stack will be added later
+This project folder currently only contains the React client side. 
 
 ## Available Scripts
 
